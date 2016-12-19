@@ -131,8 +131,8 @@ class RethinkdbServer {
 // quiet: boolean, suppresses rethinkdb log messages
 // bind: array of ip addresses to bind to, or 'all'
 // dataDir: name of rethinkdb data directory. Defaults to `rethinkdb_data`
-// driverPort: port number for rethinkdb driver connections. Auto-assigned by default.
-// httpPort: port number for webui. Auto-assigned by default.
+// driverPort: port number for rethinkdb driver connections. Defaults to '28015'
+// httpPort: port number for webui. Defaults to '8080'
 // cacheSize: cacheSize to give to rethinkdb in MB. Default 200.
 module.exports = (options) => new RethinkdbServer(options || { }).ready();
 module.exports.r = r;
