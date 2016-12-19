@@ -20,8 +20,8 @@ class RethinkdbServer {
     const quiet = Boolean(options.quiet);
     const bind = options.bind || [ '127.0.0.1' ];
     const dataDir = options.dataDir || defaultDatadir;
-    const driverPort = options.rdbPort;
-    const httpPort = options.rdbHttpPort;
+    const driverPort = options.rdb_port || 28015;
+    const httpPort = options.rdb_http_port || 8080;
     const cacheSize = options.cacheSize || 200;
 
     // Check if `rethinkdb` in PATH

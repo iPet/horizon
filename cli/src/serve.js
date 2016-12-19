@@ -392,7 +392,7 @@ const run = (args, interruptor) => {
     http_servers = servers;
 
     if (opts.start_rethinkdb) {
-      return start_rdb_server().then((server) => {
+      return start_rdb_server(opts).then((server) => {
         rdb_server = server;
 
         // Don't need to check for host, always localhost.
